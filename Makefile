@@ -1,6 +1,7 @@
 ### PROJECT_DIR
 ### This is the path to where you have created/cloned your project
 PROJECT_DIR = /Users/MyUserName/path/to/my/Project
+
 ### ARDMK_DIR
 ### Path to the Arduino-Makefile directory.
 ARDMK_DIR         = $(PROJECT_DIR)/Arduino-Makefile
@@ -18,7 +19,11 @@ USER_LIB_PATH    :=  $(PROJECT_DIR)/lib
 
 ### BOARD_TAG
 ### It must be set to the board you are currently using. (i.e uno, mega2560, etc.)
-BOARD_TAG = uno
+BOARD_TAG = nano
+
+### BOARD_TAG
+### It must be set according to the board you are currently using. 
+BOARD_SUB = atmega328
 
 ### MONITOR_BAUDRATE
 ### It must be set to Serial baudrate value you are using.
@@ -31,6 +36,10 @@ AVR_TOOLS_DIR     = /usr/local
 ### or on Linux: (remove the one you don't want)
 AVR_TOOLS_DIR = /usr
 
+### AVRDUDE_OPTS
+### Verborage option for avrdude upload debugging
+#AVRDUDE_OPTS = -v
+
 ### CFLAGS_STD
 ### Set the C standard to be used during compilation. Documentation (https://github.com/WeAreLeka/Arduino-Makefile/blob/std-flags/arduino-mk-vars.md#cflags_std)
 CFLAGS_STD        = -std=gnu11
@@ -38,6 +47,10 @@ CFLAGS_STD        = -std=gnu11
 ### CXXFLAGS_STD
 ### Set the C++ standard to be used during compilation. Documentation (https://github.com/WeAreLeka/Arduino-Makefile/blob/std-flags/arduino-mk-vars.md#cxxflags_std)
 CXXFLAGS_STD      = -std=gnu++11
+
+### CXXFLAGS
+### Flags you might want to set for debugging purpose. Comment to stop.
+#CXXFLAGS += -pedantic -Wall -Wextra
 
 ### MONITOR_PORT
 ### The port your board is connected to. Using an '*' tries all the ports and finds the right one.
