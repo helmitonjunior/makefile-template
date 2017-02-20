@@ -21,7 +21,7 @@ USER_LIB_PATH    :=  $(PROJECT_DIR)/lib
 ### It must be set to the board you are currently using. (i.e uno, mega2560, etc.)
 BOARD_TAG = nano
 
-### BOARD_TAG
+### BOARD_SUB
 ### It must be set according to the board you are currently using. 
 BOARD_SUB = atmega328
 
